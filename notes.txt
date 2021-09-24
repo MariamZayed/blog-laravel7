@@ -1,0 +1,64 @@
+404-> it's not in the routes
+view does not exise-> yeah I mean there's no page called view/example.blade.php
+
+Controller-> PostController
+Route-> post(s) so when making routers and controller in one command --r, bitch it still posts
+module-> Post
+view-> اي حاجه
+table-> blogssss
+
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Laravel</title>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+     
+    </head>
+    <body>
+    <table border=2>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Posted By</th>     
+            <th>Created At</th>
+            <th>Action</th>
+        </tr>
+            <!-- @foreach($posts as $post) -->
+                <tr>
+
+                <!-- <td>{{$post['id']}}</td> -->
+<!--                 <td>{{$post->title}}</td>
+                <td>{{$post->posted_by}}</td>
+                <td>{{$post->created_by}}</td>
+                <td><a href="/post/{{$post['id']}}">show</a></td> -->
+                <td><a href="/edit">Edit</a></td>
+                <td><a href="/delete">Delete</a></td>
+
+                
+                <!--                     @foreach($key as $post)
+                        <td>{{$post}}</td>
+                        // if arr af arr-> i was passing arr from route as database 
+                      @endforeach -->
+                </tr>
+                
+            @endforeach
+        </table>
+        <a href="/post/create"> Add Post</a>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
