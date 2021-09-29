@@ -1,5 +1,5 @@
 <ul>
     <li>{{$post->title}}</li>
-    <li>{{$post->posted_by}}</li>
-    <li>{{$post->created_by}}</li>
+    <li>{{$post->post_description}}</li>
+    <li>{{$post->User->name}}</li>
 </ul>

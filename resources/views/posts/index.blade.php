@@ -16,24 +16,24 @@
         <tr>
             <th>ID</th>
             <th>Title</th>
+            <th>Description</th>
             <th>Posted By</th>     
-            <th>Created At</th>
             <th>    </th>
-            <th>Action</th>
+            <th>Options</th>
             <th>    </th>
 
         </tr>
              @foreach($posts as $post)
                 <tr>
-                <td>{{$post->id}}</td> 
-                 <td>{{$post->title}}</td>
-                <td>{{$post->posted_by}}</td>
-                <td>{{$post->created_by}}</td>
-                <td><a class="btn btn-primary" href="/post/{{$post->id}}">show</a></td>
-                <td><a class="btn btn-secondary" href="/post/{{$post->id}}/edit">Edit</a></td>
+                <td>{{ $post->id }}</td> 
+                 <td>{{ $post->title }}</td>
+                <td>{{ $post->post_description }}</td>
+                 <td>{{ $post->User->name }}</td> {{-- اقدر اعمل كده عشان انا جوا الموديل عملت فنكشن يوزر جواها ريلايشن شيبز كل كلاس جوا الجدول --}}
+                <td><a class="btn btn-primary" href="/posts/{{ $post->id }}">show</a></td>
+                <td><a class="btn btn-secondary" href="/posts/{{ $post->id }}/edit">Edit</a></td>
 
                 <td>
-                <form action="/post/{{$post->id}}" method="post"> 
+                <form action="/posts/{{ $post->id }}" method="post"> 
                     @csrf
                     @method("DELETE")
                     <input type="submit" value="Delete" class="btn btn-danger">
@@ -43,7 +43,7 @@
                 
             @endforeach
         </table>
-        <a class="btn btn-light" href="/post/create">Add Post</a>
+        <a class="btn btn-light" href="/posts/create">Add Post</a>
     </body>
 </html>
  @endsection

@@ -16,8 +16,7 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string("title");
-            $table->string("posted_by");//غيرتهها كان حرق الاس غلط
-            $table->string("created_by");
+            $table->string("post_description");//غيرتهها كان حرق الاس غلط
             $table->unsignedBigInteger('user_id');//كده ضيفت الكولوم الي نوعه من نفس نوع الاي دي الي في جدول اليوزر
                                                 // كده ناقص اربطهم ببعض واخليه فورن كي
                                                 // الحركه ديه غلط عشان لو انا شغاله على برودكشن هيشيل كل الداتا 

@@ -28,7 +28,7 @@ class Kernel extends HttpKernel
      *
      * @var array
      */
-    protected $middlewareGroups = [
+    protected $middlewareGroups = [// ده جروب, يعني لو ناديت على واحد لازم باقية الكيز يتنفذوا
         'web' => [
             \App\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
@@ -53,7 +53,7 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => \App\Http\Middleware\Authenticate::class,
+        'auth' => \App\Http\Middleware\Authenticate::class,// اي حد هيخش الصفحه ديه لازم يكوم عامل لوج ان
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,

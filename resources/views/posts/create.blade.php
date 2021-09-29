@@ -1,21 +1,12 @@
 <body>
 @extends('layouts.app')
+@extends('layouts.errors')
 @section('content')
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
 
-<form method="post" action="/post">
+<form method="post" action="/posts">
     @csrf
     <input type="text" name="title" placeholder="title"><br>
-    <input type="text" name="posted_by" placeholder="posted_by"><br>
-  <input type="text" name="created_by" placeholder="created_by"><br><br>
+    <input type="text" name="post_description" placeholder="What are you thinking about!" style="width:400;height:200;"><br>
     <input type="submit" value="Submit">
     <!-- لازم اسماء النايم يكونوا بالظبط شبه الي في الداتا بيز عشان الموديل بيقارن بالاسم بتاع الفورم بلي في الجدول المعين في الدتا بيز -->
 </form> 

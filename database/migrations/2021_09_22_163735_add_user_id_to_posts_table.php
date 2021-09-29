@@ -14,9 +14,8 @@ class AddUserIdToPostsTable extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {// خدتي بالك ان هنا سكيما تايبل مش كريت
+                                                            // المفروض اروح اجيب سطر الكود بتاع اني اكريت اصلا يوزر اي دي هنا بس اشطه
             
-            $table->unsignedBigInteger('user_id');
-
             $table->foreign('user_id')->references('id')->on('users');
         });
     }
