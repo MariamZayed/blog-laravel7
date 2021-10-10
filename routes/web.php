@@ -3,15 +3,20 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
+
+
+
+
+
+
+
+
 Route::resource('posts', 'PostController');
 
 // Route::get('/', function () {
 //     return redirect('/posts');
 // });
 
-Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes();//ده اتعمل تلقائي لما عملن اليو اي بوتستراب وبعدين الاوث من الكمبوزر 
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');//روحي للهوم  كنترولر 
